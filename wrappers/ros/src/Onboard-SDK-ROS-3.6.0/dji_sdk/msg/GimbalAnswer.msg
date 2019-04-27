@@ -1,0 +1,1 @@
+bool action_finished

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+      <include file="$(find mynt_eye_ros_wrapper)/launch/sub/mynteye_1.launch" />
+      <include file="$(find mynt_eye_ros_wrapper)/launch/sub/mynteye_2.launch" />
+</launch>
