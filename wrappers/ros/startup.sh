@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/nvidia/Desktop/MYNT-EYE-S-SDK/wrappers/ros/devel/setup.bash
+source /home/nvidia/Desktop/vins-mynteye-m100/wrappers/ros/devel/setup.bash
 
 sleep 1s 
 gnome-terminal -x bash -c "roslaunch dji_sdk sdk.launch;exec bash"

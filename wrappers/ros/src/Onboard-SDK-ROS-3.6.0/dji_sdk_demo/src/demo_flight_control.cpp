@@ -37,10 +37,10 @@ bool takeoff_result;
 #define FRAME_MODE BODY //if earth frame, then GROUND
 #define LAST_TAG 350 //the tag whose id is 350 is the last one, the drone will take the last photo there and then RTL
 #define POS_I_LIMIT 4.0*deg2rad
-
-#define DELTA_X 0.3
+//mynteye to flight controler imu distance
+#define DELTA_X -0.24
 #define DELTA_Y 0.0
-#define DELTA_Z -0.05
+#define DELTA_Z 0.03
 
 #define DEAD_ZONE 0.00 //dead zone, unit: m
 #define POS_I_DEAD_ZONE 0.04 //in dead zone, don't intergrate
@@ -371,7 +371,7 @@ int main(int argc, char** argv)
 //        obtain_control();
       if(current_update_flag && saved_update_flag)
       {
-          position_pid_control(saved_point,current_point,0.2,saved_yaw_angle,0,3);
+          position_pid_control(saved_point,current_point,0.2,saved_yaw_angle,0,7);
           send_cmd_xyz_velocity_yaw_rate(velocity_expected.x,velocity_expected.y,velocity_expected.z,attitude_expect.z);
           current_update_flag = false;
           saved_update_flag = false;
