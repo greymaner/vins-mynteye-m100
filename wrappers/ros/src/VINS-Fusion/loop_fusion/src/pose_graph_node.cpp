@@ -133,6 +133,7 @@ void point_callback(const sensor_msgs::PointCloudConstPtr &point_msg)
     }
     */
     // for visualization
+    //maybe we can add boxes here (yolo or manufactured by mouse click?)
     sensor_msgs::PointCloud point_cloud;
     point_cloud.header = point_msg->header;
     for (unsigned int i = 0; i < point_msg->points.size(); i++)

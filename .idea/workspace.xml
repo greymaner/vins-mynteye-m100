@@ -10,14 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b76b4c7b-f4ee-4561-b25e-80144448773f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/config/mynteye/mynteye_stereo_imu_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/config/mynteye/mynteye_stereo_imu_config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/launch/mynteye.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/estimator/estimator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/estimator/estimator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/utility/visualization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/utility/visualization.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers/ros/startup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/startup.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/loop_fusion/src/pose_graph_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/loop_fusion/src/pose_graph_node.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,6 +22,20 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -66,7 +75,7 @@
       <workItem from="1556413860486" duration="1076000" />
       <workItem from="1556416442252" duration="945000" />
       <workItem from="1566296645697" duration="4144000" />
-      <workItem from="1566356970290" duration="3724000" />
+      <workItem from="1566356970290" duration="11771000" />
     </task>
     <servers />
   </component>
