@@ -1,1 +1,24 @@
-CMake executable is incorrect Configure
+/home/jiaxing/Downloads/clion-2019.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jiaxing/vins-mynteye-m100
+-- HOST_ARCH: x86_64
+CMake Error at cmake/DetectOpenCV.cmake:21 (find_package):
+  By not providing "FindOpenCV.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "OpenCV", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "OpenCV" with any
+  of the following names:
+
+    OpenCVConfig.cmake
+    opencv-config.cmake
+
+  Add the installation prefix of "OpenCV" to CMAKE_PREFIX_PATH or set
+  "OpenCV_DIR" to a directory containing one of the above files.  If "OpenCV"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  cmake/Option.cmake:38 (include)
+  CMakeLists.txt:27 (include)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/jiaxing/vins-mynteye-m100/cmake-build-debug/CMakeFiles/CMakeOutput.log".

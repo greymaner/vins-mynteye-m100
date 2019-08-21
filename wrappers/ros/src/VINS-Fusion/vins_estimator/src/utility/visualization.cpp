@@ -13,6 +13,7 @@ using namespace ros;
 using namespace Eigen;
 ros::Publisher pub_odometry, pub_latest_odometry;
 ros::Publisher pub_path;
+ros::Publisher pub_saved_keyframe;
 ros::Publisher pub_point_cloud, pub_margin_cloud;
 ros::Publisher pub_key_poses;
 ros::Publisher pub_camera_pose;
@@ -28,7 +29,7 @@ ros::Publisher pub_image_track;
 CameraPoseVisualization cameraposevisual(1, 0, 0, 1);
 static double sum_of_path = 0;
 static Vector3d last_path(0.0, 0.0, 0.0);
-
+int lines =1;
 size_t pub_counter = 0;
 string readTxt(string filename,int line){
     ifstream text;
@@ -217,7 +218,7 @@ void pubOdometry(const Estimator &estimator, const std_msgs::Header &header)
 
         //读取保存的keyframe文件的第lines行，然后计算差值
         string strVec1;
-        string file_path1 =  "/home/nvidia/mynt_vins/1/pose_graph.txt";
+        string file_path1 =  "/home/jiaxing/output/1/pose_graph.txt";
         strVec1 =readTxt(file_path1,lines);
         if(strVec1=="no graph_pose document!"){
             cout<<"no graph_pose document!"<<endl;
@@ -246,13 +247,13 @@ void pubOdometry(const Estimator &estimator, const std_msgs::Header &header)
             odometry.pose.pose.orientation.z = Rz;
             odometry.pose.pose.orientation.w = Rw;
 //            cout<<Px<<","<<Py<<","<<Pz<<","<<Rw<<","<<Rx<<","<<Ry<<","<<Rz<<endl;
-            float deltapx = Px - correct_t.x();
-            float deltapy = Py - correct_t.y();
-            float deltapz = Pz - correct_t.z();
-            float deltarw = Rw - correct_q.w();
-            float deltarx = Rx - correct_q.x();
-            float deltary = Ry - correct_q.y();
-            float deltarz = Rz - correct_q.z();
+            float deltapx = Px - estimator.Ps[WINDOW_SIZE].x();
+            float deltapy = Py - estimator.Ps[WINDOW_SIZE].y();
+            float deltapz = Pz - estimator.Ps[WINDOW_SIZE].z();
+            float deltarw = Rw - tmp_Q.w();
+            float deltarx = Rx - tmp_Q.x();
+            float deltary = Ry - tmp_Q.y();
+            float deltarz = Rz - tmp_Q.z();
             cout<<"the delta of current and destination: "<<deltapx<<","<<deltapy<<","<<deltapz<<","<<deltarw<<","<<deltarx<<","<<deltary<<","<<deltarz<<endl;
 
             //epsilon取决对重新回到之前keyframe的灵敏度

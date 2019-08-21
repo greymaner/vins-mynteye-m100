@@ -962,18 +962,18 @@ bool Estimator::failureDetection()
         ROS_INFO(" big IMU gyr bias estimation %f", Bgs[WINDOW_SIZE].norm());
         return true;
     }
-    if (tic(0) > 1)
-    {
-        ROS_INFO(" big extri param estimation %d", tic(0) > 1);
-        return true;
-    }
+//    if (tic(0) > 1)
+//    {
+//        ROS_INFO(" big extri param estimation %d", tic(0) > 1);
+//        return true;
+//    }
     Vector3d tmp_P = Ps[WINDOW_SIZE];
-    if ((tmp_P - last_P).norm() > 5)
+    if ((tmp_P - last_P).norm() > 0.5)
     {
         ROS_INFO(" big translation");
         return true;
     }
-    if (abs(tmp_P.z() - last_P.z()) > 1)
+    if (abs(tmp_P.z() - last_P.z()) > 0.5)
     {
         ROS_INFO(" big z translation");
         return true; 
