@@ -11,8 +11,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b76b4c7b-f4ee-4561-b25e-80144448773f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/config/mynteye/mynteye_stereo_imu_config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/config/mynteye/mynteye_stereo_imu_config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/loop_fusion/src/pose_graph_node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/loop_fusion/src/pose_graph_node.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/utility/visualization.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/wrappers/ros/src/VINS-Fusion/vins_estimator/src/utility/visualization.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +75,8 @@
       <workItem from="1556413860486" duration="1076000" />
       <workItem from="1556416442252" duration="945000" />
       <workItem from="1566296645697" duration="4144000" />
-      <workItem from="1566356970290" duration="11771000" />
+      <workItem from="1566356970290" duration="15535000" />
+      <workItem from="1566437544714" duration="3533000" />
     </task>
     <servers />
   </component>
